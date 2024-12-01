@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rancho&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rancho&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,7 @@
         @apply rounded-none bg-primary text-dark-gray font-rancho px-6 py-2 text-2xl hover:text-white border-2 border-transparent hover:border-white hover:bg-transparent transition-all duration-300 active:scale-95;
     }
     .btn-secondary {
-        @apply border-2 bg-primary border-dark-brown px-6 py-2 rounded-md font-rancho text-2xl text-white hover:bg-transparent transition-all duration-300
+        @apply border-2 bg-primary border-dark-brown px-6 py-2 rounded-md font-rancho text-2xl text-white hover:bg-transparent transition-all duration-300;
     }
 }
 
@@ -18,15 +18,27 @@
         @apply container mx-auto px-4;
     }
     .title {
-        @apply font-rancho text-6xl
+        @apply font-rancho text-6xl;
     }
     .desc {
-        @apply text-xl font-raleway leading-7 max-w-2xl
+        @apply text-xl font-raleway leading-7 max-w-2xl;
     }
     .section-title {
-        @apply title text-dark-brown drop-shadow-text-xl
+        @apply title text-dark-brown drop-shadow-text-xl;
     }
     .section-desc {
         @apply font-raleway text-xl text-deep-black;
+    }
+    .form-heading {
+        @apply text-5xl font-rancho text-center text-blue-gray drop-shadow-text-3xl;
+    }
+    .form-desc {
+        @apply mx-auto font-raleway text-lg text-center text-normal-gray max-w-[58rem] mt-8;
+    }
+    .form-title {
+        @apply text-dark-gray text-xl font-semibold capitalize;
+    }
+    .form-input {
+        @apply bg-white text-normal-gray p-3 rounded-md focus:outline-primary focus:shadow-lg transition-all duration-300;
     }
 }
