@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import arrow from "../assets/img/arrow.png";
+import Swal from "sweetalert2";
 
 const AddCoffeee = () => {
     const handleAddCoffee = (e) => {
@@ -25,6 +26,38 @@ const AddCoffeee = () => {
         };
 
         console.log(addCoffee);
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Do you want to add coffee?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, add it!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch("http://localhost:5000/coffees", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(addCoffee),
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                        if (data.insertedId) {
+                            Swal.fire({
+                                title: "Confirmation!",
+                                text: "Coffee has been added successfully!",
+                                icon: "success",
+                            });
+                            form.reset();
+                        }
+                    });
+            }
+        });
     };
 
     return (
