@@ -6,7 +6,10 @@
 
 @layer components {
     .btn {
-        @apply rounded-none bg-primary text-dark-gray font-rancho px-6 py-2 text-2xl hover:text-white border-2 border-transparent hover:border-white hover:bg-transparent transition-all duration-300;
+        @apply rounded-none bg-primary text-dark-gray font-rancho px-6 py-2 text-2xl hover:text-white border-2 border-transparent hover:border-white hover:bg-transparent transition-all duration-300 active:scale-95;
+    }
+    .btn-secondary {
+        @apply border-2 bg-primary border-dark-brown px-6 py-2 rounded-md font-rancho text-2xl text-white hover:bg-transparent transition-all duration-300
     }
 }
 
@@ -19,5 +22,11 @@
     }
     .desc {
         @apply text-xl font-raleway leading-7 max-w-2xl
+    }
+    .section-title {
+        @apply title text-dark-brown drop-shadow-text-xl
+    }
+    .section-desc {
+        @apply font-raleway text-xl text-deep-black;
     }
 }
