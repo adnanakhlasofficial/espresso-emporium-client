@@ -6,8 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary': "#E3B577",
+        'dark-gray': "#242222", 
+      },
       backgroundImage: {
-        'navbg': "url('/images/navbg.jpg')"
+        'navbg': "url('/images/navbg.jpg')",
+        'bannerbg': "url('/images/bannerbg.png')",
       },
       fontFamily: {
         'raleway': ["Raleway", "sans-serif"],

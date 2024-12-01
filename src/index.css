@@ -4,8 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .btn {
+        @apply rounded-none bg-primary text-dark-gray font-rancho px-6 py-2 text-2xl hover:text-white border-2 border-transparent hover:border-white hover:bg-transparent transition-all duration-300;
+    }
+}
+
 @layer utilities {
     .wrapper {
         @apply container mx-auto px-4;
+    }
+    .title {
+        @apply font-rancho text-6xl
+    }
+    .desc {
+        @apply text-xl font-raleway leading-7 max-w-2xl
     }
 }
