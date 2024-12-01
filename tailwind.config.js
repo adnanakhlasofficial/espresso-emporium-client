@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'navbg': "url('/images/navbg.jpg')"
+      },
       fontFamily: {
         'raleway': ["Raleway", "sans-serif"],
         'rancho': ["Rancho", "cursive"]
