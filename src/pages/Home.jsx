@@ -21,7 +21,7 @@ const Home = () => {
     }
     
     return (
-        <div className="space-y-24">
+        <main className="space-y-24 min-h-[calc(100vh-38rem)]">
             <Banner></Banner>
             <section className="bg-sectionbg bg-no-repeat bg-cover !my-24">
                 <SectionHeading title={"Our Popular Products"} desc={"--- Sip & Savor ---"}>
@@ -34,7 +34,7 @@ const Home = () => {
                     }
                 </div>
             </section>
-        </div>
+        </main>
     );
 };
 

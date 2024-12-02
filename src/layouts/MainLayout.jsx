@@ -8,9 +8,9 @@ const MainLayout = () => {
             <header className="bg-navbg bg-contain">
                 <Navbar></Navbar>
             </header>
-            <main className="min-h-[calc(100vh-38rem)]">
-                <Outlet></Outlet>
-            </main>
+
+            <Outlet></Outlet>
+
             <footer className="bg-footerbg bg-cover bg-center">
                 <Footer></Footer>
             </footer>

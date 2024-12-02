@@ -61,7 +61,7 @@ const AddCoffeee = () => {
     };
 
     return (
-        <div className="bg-formbg bg-cover w-full flex flex-col justify-center items-center">
+        <main className="bg-formbg bg-cover w-full flex flex-col justify-center items-center min-h-[calc(100vh-38rem)]">
             <div className="self-start wrapper my-8">
                 <Link
                     className="text-3xl rounded-lg font-rancho text-center text-blue-gray flex gap-4 items-center hover:bg-primary px-6 py-2 w-max transition-all duration-300"
@@ -164,7 +164,7 @@ const AddCoffeee = () => {
                     </button>
                 </form>
             </div>
-        </div>
+        </main>
     );
 };
 
