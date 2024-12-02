@@ -37,7 +37,7 @@ const AddCoffeee = () => {
             confirmButtonText: "Yes, add it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch("http://localhost:5000/coffees", {
+                fetch("https://api-espresso-emporium.vercel.app/coffees", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

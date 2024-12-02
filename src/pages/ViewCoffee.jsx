@@ -28,7 +28,7 @@ const ViewCoffee = () => {
                         alt=""
                     />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 w-2/5">
                     <p className="section-title mb-8">Niceties</p>
                     <p className="font-medium text-deep-black text-xl">
                         Name:{" "}

@@ -41,7 +41,7 @@ const UpdateCoffee = () => {
             confirmButtonText: "Yes, add it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/coffees/${id}`, {
+                fetch(`https://api-espresso-emporium.vercel.app/coffees/${id}`, {
                     method: "PUT",
                     headers: {
                         "content-type": "application/json",

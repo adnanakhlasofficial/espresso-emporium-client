@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import AddCoffeee from "../pages/AddCoffeee";
-import ViewCoffee from "../components/ViewCoffee";
-import UpdateCoffee from "../components/UpdateCoffee";
+import ViewCoffee from "../pages/ViewCoffee";
+import UpdateCoffee from "../pages/UpdateCoffee";
 
 const router = createBrowserRouter([
     {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch("http://localhost:5000/coffees"),
+                loader: () => fetch("https://api-espresso-emporium.vercel.app/coffees"),
             },
             {
                 path: "/add-coffee",
@@ -23,12 +23,12 @@ const router = createBrowserRouter([
                 path: "/view-coffee/:id",
                 element: <ViewCoffee></ViewCoffee>,
                 loader: ({ params }) =>
-                    fetch(`http://localhost:5000/coffees/${params.id}`),
+                    fetch(`https://api-espresso-emporium.vercel.app/coffees/${params.id}`),
             },
             {
                 path: "/update-coffee/:id",
                 element: <UpdateCoffee></UpdateCoffee>,
-                loader: ({params}) => fetch(`http://localhost:5000/coffees/${params.id}`)
+                loader: ({params}) => fetch(`https://api-espresso-emporium.vercel.app/coffees/${params.id}`)
             },
         ],
     },

@@ -13,7 +13,7 @@ const Home = () => {
         console.log(_id)
         const remainingCoffees = coffees.filter(coffee => coffee._id !== _id);
         setCoffees(remainingCoffees);
-        fetch(`http://localhost:5000/coffees/${_id}`, {
+        fetch(`https://api-espresso-emporium.vercel.app/coffees/${_id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -28,7 +28,7 @@ const Home = () => {
                     <Link to={"/add-coffee"}><button className="btn-secondary mt-6"><span className="drop-shadow-text-2xl">Add Coffee</span></button></Link>
                 </SectionHeading>
 
-                <div className="wrapper grid grid-cols-2 gap-8 mt-12">
+                <div className="wrapper grid grid-cols-2 gap-8 !py-16">
                     {
                         coffees.map(coffee => <CoffeeCard key={coffee._id} handleDelete={handleDelete} coffee={coffee}></CoffeeCard>)
                     }
