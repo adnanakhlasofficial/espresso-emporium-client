@@ -1,13 +1,11 @@
 import { Link, useLoaderData } from "react-router-dom";
 import arrow from "../assets/img/arrow.png";
 
-
 const ViewCoffee = () => {
     const coffee = useLoaderData();
     console.log(coffee);
     return (
-        <div className="bg-formbg bg-cover w-full flex flex-col justify-center items-center pb-24">
-
+        <main className="bg-formbg bg-cover w-full flex flex-col justify-center items-center pb-24 min-h-[calc(100vh-38rem)]">
             <div className="self-start wrapper my-8">
                 <Link
                     className="text-3xl rounded-lg font-rancho text-center text-blue-gray flex gap-4 items-center hover:bg-primary px-6 py-2 w-max transition-all duration-300"
@@ -18,7 +16,6 @@ const ViewCoffee = () => {
                     <span className="drop-shadow-text-3xl ">Back to home</span>
                 </Link>
             </div>
-
 
             <div className="wrapper py-24 gap-24 justify-center rounded-xl bg-[#F5F4F1] flex items-center !mx-auto">
                 <div className="">
@@ -68,7 +65,7 @@ const ViewCoffee = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </main>
     );
 };
 
